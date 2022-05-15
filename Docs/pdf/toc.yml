@@ -1,0 +1,6 @@
+- name: Articles
+  href: ../articles/toc.md
+- name: API
+  href: ../obj/api/toc.yml
+- name: Obsolete
+  href: ../obsolete/obsolete.md
