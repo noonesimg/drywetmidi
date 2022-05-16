@@ -95,10 +95,10 @@
     ],
     "template": [
       "pdf.default",
-	  "templates/dwm"
+	  "templates/dwm.pdf"
     ],
     "wkhtmltopdf": {
-      "additionalArguments": "--enable-local-file-access"
+      "additionalArguments": "--enable-local-file-access --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0"
     },
     "dest": "_site_pdf"
   }
