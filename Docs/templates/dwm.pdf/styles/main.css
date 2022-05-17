@@ -25,6 +25,11 @@ body {
     border: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: inherit;
+	color: inherit;
+}
+
 h1[data-uid] {
     margin-bottom: 30px;
 }
@@ -45,6 +50,11 @@ h1[data-uid] {
     border-left-width: 1px;
     border: 1px solid #5E5E5D;
     color: #F8F8F8;
+	border-collapse: collapse;
+}
+
+table th {
+	text-transform: none;
 }
 
 thead {
@@ -53,7 +63,6 @@ thead {
 
 pre {
     background-color: #3B3A39;
-    border: 1px solid #5E5E5D;
     border-radius: 0px;
     color: rgb(227, 227, 227);
 }
@@ -64,6 +73,12 @@ code, kbd, pre, samp {
     background-color: #3B3A39;
     border-radius: 0px;
 	border: none;
+}
+
+pre code {
+	border: 1px solid #5E5E5D;
+	background-color: #3B3A39;
+	color: #F8F8F8;
 }
 
 a code {
@@ -100,11 +115,11 @@ hr {
     color: #ce9178;
 }
 
-button, a {
+button, a, a.nohref, a:link {
     color: rgb(77, 178, 255);
 }
 
-button:hover, button:focus, a:hover, a:focus {
+button:hover, button:focus, a:hover, a:focus, a.nohref:hover, a:link {
     color: rgb(0, 145, 255);
 }
 
@@ -304,6 +319,68 @@ h4[data-uid]:before {
     content: "▪ ▪ ▪";
     display: block;
     color: #EC5508;
+}
+
+.inheritance .level0:before,
+.inheritance .level1:before,
+.inheritance .level2:before,
+.inheritance .level3:before,
+.inheritance .level4:before,
+.inheritance .level5:before,
+.inheritance .level6:before,
+.inheritance .level7:before,
+.inheritance .level8:before,
+.inheritance .level9:before {
+    content: '↳';
+    margin-right: 5px;
+}
+
+.inheritance .level0 {
+    margin-left: 0em;
+}
+
+.inheritance .level1 {
+    margin-left: 1em;
+}
+
+.inheritance .level2 {
+    margin-left: 2em;
+}
+
+.inheritance .level3 {
+    margin-left: 3em;
+}
+
+.inheritance .level4 {
+    margin-left: 4em;
+}
+
+.inheritance .level5 {
+    margin-left: 5em;
+}
+
+.inheritance .level6 {
+    margin-left: 6em;
+}
+
+.inheritance .level7 {
+    margin-left: 7em;
+}
+
+.inheritance .level8 {
+    margin-left: 8em;
+}
+
+.inheritance .level9 {
+    margin-left: 9em;
+}
+
+.decalaration, .fieldValue, .parameters, .returns {
+    color: inherit;
+}
+
+span.parametername, span.paramref, span.typeparamref {
+    font-style: italic;
 }
 
 /* Images exceptions */

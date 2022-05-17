@@ -48,6 +48,12 @@ steps:
     targetType: filePath
     filePath: '$(Build.SourcesDirectory)/Resources/Scripts/Generate obsolete API section.ps1'
 
+- task: PowerShell@2
+  displayName: Install wkhtmltopdf
+  inputs:
+    targetType: 'inline'
+    script: choco install wkhtmltopdf -y --version $(WkhtmltopdfVersion)
+
 - template: Templates/step-build-docs.yaml
 
 - task: PublishPipelineArtifact@1
@@ -55,3 +61,16 @@ steps:
   inputs:
     targetPath: Docs\_site
     artifact: Docs
+    
+- task: PowerShell@2
+  displayName: Rename PDF file
+  inputs:
+    targetType: 'inline'
+    script: |
+      Rename-Item -Path Docs\_site_pdf\Docs_pdf.pdf -NewName Docs\_site_pdf\Melanchall.DryWetMIDI.$(LibraryVersion).pdf
+      
+- task: PublishPipelineArtifact@1
+  displayName: Publish 'PDF' artifact
+  inputs:
+    targetPath: Docs\_site_pdf\Melanchall.DryWetMIDI.$(LibraryVersion).pdf
+    artifact: PDF
