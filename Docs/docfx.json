@@ -97,8 +97,10 @@
       "pdf.default",
 	  "templates/dwm.pdf"
     ],
+	"name": "Melanchall.DryWetMIDI 6.1.1",
+	"tocTitle": "Melanchall.DryWetMIDI 6.1.1",
     "wkhtmltopdf": {
-      "additionalArguments": "--enable-local-file-access --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0"
+      "additionalArguments": "--enable-local-file-access --margin-bottom 10 --margin-left 10 --margin-right 10 --margin-top 10 --disable-smart-shrinking"
     },
     "dest": "_site_pdf"
   }
