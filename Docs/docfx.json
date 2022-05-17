@@ -51,6 +51,7 @@
     "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ]
   },
   "pdf": {
+	"noStdin": true,
     "content": [
       {
         "files": [ "obj/api/*.yml" ],
