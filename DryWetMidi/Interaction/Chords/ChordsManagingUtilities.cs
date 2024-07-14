@@ -214,7 +214,7 @@ namespace Melanchall.DryWetMidi.Interaction
 
             var result = new List<Chord>();
 
-            foreach (var chord in GetChordsAndNotesAndTimedEventsLazy(midiEvents.GetTimedEventsLazy(timedEventDetectionSettings), settings).OfType<Chord>())
+            foreach (var chord in GetChordsAndNotesAndTimedEventsLazy(midiEvents.GetTimedEventsLazy(timedEventDetectionSettings), settings, noteDetectionSettings, timedEventDetectionSettings).OfType<Chord>())
             {
                 result.Add(chord);
             }

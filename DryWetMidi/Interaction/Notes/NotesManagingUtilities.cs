@@ -347,7 +347,7 @@ namespace Melanchall.DryWetMidi.Interaction
             switch (eventsCollections.Length)
             {
                 case 0: return new Note[0];
-                case 1: return eventsCollections[0].GetNotes(settings);
+                case 1: return eventsCollections[0].GetNotes(settings, timedEventDetectionSettings);
             }
 
             var eventsCount = eventsCollections.Sum(e => e.Count);
